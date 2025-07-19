@@ -52,22 +52,22 @@ body {
 
 .app-header {
   text-align: center;
-  margin-bottom: 2rem;
-  padding: 2rem 0;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
 }
 
 .app-header h1 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .app-header p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--gray-600);
   max-width: 600px;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 0.75rem auto;
 }
 
 .stats {
@@ -88,22 +88,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 140px);
+  min-height: 600px;
 }
 
 /* Controls Section */
 .controls-section {
   background: white;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow);
   border: 1px solid var(--gray-200);
+  flex-shrink: 0;
 }
 
 .view-toggle {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   background: var(--gray-100);
   padding: 0.25rem;
   border-radius: var(--border-radius);
@@ -135,6 +137,7 @@ body {
   display: flex;
   gap: 1rem;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .search-bar {
@@ -148,7 +151,9 @@ body {
   border-radius: var(--border-radius);
   font-size: 1rem;
   transition: var(--transition);
-  background: var(--gray-50);
+  background: white;
+  color: var(--gray-900);
+  box-sizing: border-box;
 }
 
 .search-input:focus {
@@ -156,6 +161,10 @@ body {
   border-color: var(--primary-color);
   background: white;
   box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--gray-500);
 }
 
 .sort-controls {
@@ -177,13 +186,20 @@ body {
   border-radius: var(--border-radius);
   font-size: 0.875rem;
   background: white;
+  color: var(--gray-900);
   transition: var(--transition);
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .sort-select:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+}
+
+.sort-select:hover {
+  border-color: var(--gray-300);
 }
 
 /* Main Content - Split Layout */
